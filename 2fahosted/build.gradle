@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
 }
 
 android {
@@ -26,6 +27,16 @@ android {
     }
 }
 
-dependencies {
-    
+publishing {
+    publications {
+        release(MavenPublication) {
+            afterEvaluate {
+                from components.release
+            }
+
+            groupId = 'com.github.oyin25'
+            artifactId = 'AuthenticatorLib'
+            version = 'v1.1.0'
+        }
+    }
 }
