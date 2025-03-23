@@ -48,7 +48,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.github.oyin25:AuthenticatorLib:v1.1.0'
+    implementation 'com.github.oyin25:AuthenticatorLib:v1.2.1'
 }
 ```
 
