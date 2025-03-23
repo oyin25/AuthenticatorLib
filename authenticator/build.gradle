@@ -27,16 +27,15 @@ android {
     }
 }
 
-publishing {
-    publications {
-        release(MavenPublication) {
-            afterEvaluate {
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
                 from components.release
+                groupId = 'com.github.oyin25'
+                artifactId = 'AuthenticatorLib'
+                version = 'v1.1.1'
             }
-
-            groupId = 'com.github.oyin25'
-            artifactId = 'AuthenticatorLib'
-            version = 'v1.1.1'
         }
     }
 }
